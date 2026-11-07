@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+
+az account set --subscription "unc-sdis-solveathon-team04"
+
+export PREFIX="ffm"
+export LOCATION="eastus2"
+export SUFFIX="8169"
+export RG="rg-$PREFIX-team"
+export STORAGE="st${PREFIX}${SUFFIX}"
+export AOAI="aoai-$PREFIX-$SUFFIX"
+export ACR="acr${PREFIX}${SUFFIX}"
+export CAE="cae-$PREFIX"
+export APP="app-$PREFIX-web"
+export JOB="job-$PREFIX-refresh"
+export IMAGE="$ACR.azurecr.io/ffm:v1"
+
+export STORAGE_CONN=$(az storage account show-connection-string -n $STORAGE -g $RG --query connectionString -o tsv 2>/dev/null)
+export AOAI_ENDPOINT=$(az cognitiveservices account show -n $AOAI -g $RG --query properties.endpoint -o tsv 2>/dev/null)
+export AOAI_KEY=$(az cognitiveservices account keys list -n $AOAI -g $RG --query key1 -o tsv 2>/dev/null)
+
+echo "Subscription: $(az account show --query name -o tsv)"
+echo "AOAI is $AOAI"
+
+az extension add --name containerapp --upgrade --only-show-errors
+
+for ns in Microsoft.App Microsoft.OperationalInsights Microsoft.ContainerRegistry Microsoft.Storage Microsoft.CognitiveServices; do
+  az provider register --namespace $ns --wait
+done
+
+az group create --name $RG --location $LOCATION -o table
+
+az group show -n $RG --query properties.provisioningState -o tsv
+
+az storage account create -n $STORAGE -g $RG -l $LOCATION \
+  --sku Standard_LRS --kind StorageV2 \
+  --min-tls-version TLS1_2 --allow-blob-public-access false -o table
+
+export STORAGE_CONN=$(az storage account show-connection-string -n $STORAGE -g $RG --query connectionString -o tsv)
+
+az storage container create --name ffm-data --connection-string "$STORAGE_CONN"
+
+az storage container list --connection-string "$STORAGE_CONN" --query "[].name" -o tsv
+
+az cognitiveservices account create -n $AOAI -g $RG -l $LOCATION \
+  --kind OpenAI --sku S0 --custom-domain $AOAI --yes -o table
+
+az cognitiveservices account list-models -n $AOAI -g $RG \
+  --query "[?contains(name,'mini') || contains(name,'embedding')].{model:name, version:version}" -o table
+
+az cognitiveservices account deployment create -n $AOAI -g $RG \
+  --deployment-name embed --model-name text-embedding-3-small --model-version 1 \
+  --model-format OpenAI --sku-name GlobalStandard --sku-capacity 50
+
+az cognitiveservices account deployment create -n $AOAI -g $RG \
+  --deployment-name chat --model-name gpt-4.1-mini --model-version 2025-04-14 \
+  --model-format OpenAI --sku-name GlobalStandard --sku-capacity 50
+
+export AOAI_ENDPOINT=$(az cognitiveservices account show -n $AOAI -g $RG --query properties.endpoint -o tsv)
+export AOAI_KEY=$(az cognitiveservices account keys list -n $AOAI -g $RG --query key1 -o tsv)
+
+az cognitiveservices account deployment list -n $AOAI -g $RG \
+  --query "[].{name:name, model:properties.model.name, state:properties.provisioningState}" -o table
+echo $AOAI_ENDPOINT
+
+curl -s -X POST https://api.grants.gov/v1/api/search2 \
+  -H "Content-Type: application/json" \
+  -d '{"oppStatuses":"forecasted|posted","eligibilities":"00","rows":25}' \
+  -o sample_search.json
+
+head -c 1500 sample_search.json; echo
+
+az storage blob upload --container-name ffm-data \
+  --name raw/$(date +%Y-%m-%d)/sample_search.json --file sample_search.json \
+  --connection-string "$STORAGE_CONN" --overwrite -o table
+
+az acr create -n $ACR -g $RG -l $LOCATION --sku Basic --admin-enabled true -o table
+
+az containerapp env create -n $CAE -g $RG -l $LOCATION -o table
+
+az containerapp env show -n $CAE -g $RG --query properties.provisioningState -o tsv
