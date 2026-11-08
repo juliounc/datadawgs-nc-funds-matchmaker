@@ -1,0 +1,125 @@
+{
+  "agency_id": "ncdhhs",
+  "agency_name": "NC Department of Health and Human Services",
+  "source_document": {
+    "title": "NCDHHS Strategic Plan 2026-2030",
+    "url": "https://www.osbm.nc.gov/dhhs-2026-2030-strategic-plan/download",
+    "year": 2026
+  },
+  "mission": "In collaboration with our partners, DHHS provides essential services to improve the health, safety, and well-being of all North Carolinians.",
+  "goals": [
+    {
+      "goal_id": "G1",
+      "title": "Access to care",
+      "description": "Expand access to healthcare by ensuring all individuals no matter their location have a nearby health service and that said health service is affordable. Limit existing social or logistical barriers to accessing healthcare via policy and other programs of mitigation.",
+      "keywords": [
+        "access to care",
+        "affordable care",
+        "health insurance",
+        "Medicaid",
+        "underserved communities",
+        "telehealth",
+        "community health centers"
+      ]
+    },
+    {
+      "goal_id": "G2",
+      "title": "Whole person well-being",
+      "description": "Ensure that healthcare services are high-quality and attend to all of a person's medical needs. To be achieved by improving coordination between systems, improving both the quality of care but also the reach of care. Select medical needs of interest are access to healthy food and access to mental health, brain injury, and/or disability care.",
+      "keywords": [
+        "mental health",
+        "substance use disorder",
+        "developmental disabilities",
+        "traumatic brain injury",
+        "food insecurity",
+        "healthy food",
+        "care coordination"
+      ]
+    },
+    {
+      "goal_id": "G3",
+      "title": "Transform and modernize health care",
+      "description": "Modernize programs to improve access and lower operating costs using the resources of the state to track costs and use its influence to secure resources and knowledge, including a sustainable rural health delivery system and the expertise of state-operated health care facilities.",
+      "keywords": [
+        "rural health",
+        "rural hospitals",
+        "rural health delivery",
+        "state-operated health care",
+        "value-based care",
+        "health care delivery"
+      ]
+    },
+    {
+      "goal_id": "G4",
+      "title": "Sustainable workforce",
+      "description": "Develop and improve the medical workforce both by making career pathways more accessible through removal of employment barriers and developing new recruitment strategies. Then train the workforce so that they are more coordinated and can perform higher quality care.",
+      "keywords": [
+        "health workforce",
+        "behavioral health workforce",
+        "nursing workforce",
+        "career pathways",
+        "recruitment and retention",
+        "employment barriers"
+      ]
+    },
+    {
+      "goal_id": "G5",
+      "title": "Organizational excellence",
+      "description": "Foster a culture that champions collaboration, data-driven decision making, accountability, risk management, and efficient use of resources.",
+      "keywords": [
+        "data modernization",
+        "health information technology",
+        "public health infrastructure",
+        "data-driven decision making"
+      ]
+    }
+  ],
+  "keywords": [
+    "affordable care",
+    "developmental disabilities",
+    "healthy food",
+    "Medicaid",
+    "mental health disorders",
+    "rural health delivery",
+    "state-operated health care",
+    "traumatic brain injury"
+  ],
+  "program_areas": [
+    "Medicaid",
+    "child welfare",
+    "aging and adult services",
+    "maternal and child health",
+    "WIC"
+  ],
+  "exclude_keywords": [
+    "clinical trial"
+  ],
+  "preferred_funders": [
+    "CDC",
+    "HRSA",
+    "ACF",
+    "ACL",
+    "CMS",
+    "ASPR",
+    "SAMHS",
+    "OPHS"
+  ],
+  "_original_keywords": [
+    "affordable care",
+    "developmental disabilities",
+    "healthy food",
+    "medicare",
+    "mental health disorders",
+    "rural health delivery",
+    "state-operated health care",
+    "traumatic brain injury"
+  ],
+  "_review": [
+    "Goal wording is Person B's (typos fixed). Keywords marked in _review were proposed by Claude and need team approval.",
+    "FIX: 'medicare' -> 'Medicaid' (Medicare is federal; NCDHHS administers Medicaid).",
+    "FIX: G3 description extended with rural health delivery and state-operated facilities (plan Objectives 3.3, 3.4), which the paraphrase had dropped.",
+    "PROPOSED: all per-goal keywords, program_areas, exclude_keywords.",
+    "preferred_funders lists HHS offices but deliberately NOT NIH (mostly university research grants)."
+  ],
+  "updated_at": "2026-11-07"
+}

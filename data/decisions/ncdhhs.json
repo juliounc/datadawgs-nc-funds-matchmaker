@@ -1,0 +1,37 @@
+{
+  "agency_id": "ncdhhs",
+  "items": [
+    {
+      "opportunity_id": "741f2935-18c1-4e3e-8f54-f30dc3a6ee80",
+      "decision": "Pursue",
+      "note": "",
+      "decided_by": "staff",
+      "decided_at": "2026-11-08T00:32:55Z",
+      "score_at_decision": 65.1
+    },
+    {
+      "opportunity_id": "741f2935-18c1-4e3e-8f54-f30dc3a6ee80",
+      "decision": "Not reviewed",
+      "note": "",
+      "decided_by": "staff",
+      "decided_at": "2026-11-08T00:32:56Z",
+      "score_at_decision": 65.1
+    },
+    {
+      "opportunity_id": "01a1f3ea-fac9-40f9-8414-6aa74edc8a21",
+      "decision": "Pursue",
+      "note": "",
+      "decided_by": "staff",
+      "decided_at": "2026-11-08T00:33:02Z",
+      "score_at_decision": 91.7
+    },
+    {
+      "opportunity_id": "01a1f3ea-fac9-40f9-8414-6aa74edc8a21",
+      "decision": "Not reviewed",
+      "note": "",
+      "decided_by": "staff",
+      "decided_at": "2026-11-08T00:33:09Z",
+      "score_at_decision": 91.7
+    }
+  ]
+}

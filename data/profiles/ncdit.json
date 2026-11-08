@@ -1,0 +1,111 @@
+{
+  "agency_id": "ncdit",
+  "agency_name": "NC Department of Information Technology",
+  "source_document": {
+    "title": "REPLACE: NCDIT strategic plan title",
+    "url": "REPLACE: link",
+    "year": null
+  },
+  "mission": "Enable business-driven services and solutions that provide a secure and frictionless digital government experience for North Carolinians.",
+  "goals": [
+    {
+      "goal_id": "G1",
+      "title": "Technology and data standards",
+      "description": "Set clear standards for the technology and data services used by the state. Standards need to be addressed in the areas of transparency, accountability, performance, fairness, etc.",
+      "keywords": [
+        "data governance",
+        "data standards",
+        "privacy",
+        "personally identifiable information",
+        "IT modernization"
+      ]
+    },
+    {
+      "goal_id": "G2",
+      "title": "AI readiness and infrastructure",
+      "description": "Position the state to make good use of new technologies such as AI by ensuring infrastructure is in place for implementation and subsequent scaling of AI use. Make sure that agencies statewide are comfortable using AI and are up-to-date with ethical and security concerns involving the technology.",
+      "keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "cloud infrastructure",
+        "enterprise infrastructure",
+        "quantum computing"
+      ]
+    },
+    {
+      "goal_id": "G3",
+      "title": "Statewide AI ecosystem and collaboration",
+      "description": "Achieve scale by developing a statewide AI ecosystem by having the DIT act as a partner that bridges public agencies. Together a more united system would have less redundancy, be more streamlined, and allow for greater collaboration.",
+      "keywords": [
+        "data sharing",
+        "interoperability",
+        "shared services",
+        "digital government",
+        "open data"
+      ]
+    },
+    {
+      "goal_id": "G4",
+      "title": "Cybersecurity",
+      "description": "Enhance NC's cybersecurity through constant monitoring, establishing mechanisms of accountability, and partnerships with other levels of government.",
+      "keywords": [
+        "cybersecurity",
+        "cyber resilience",
+        "critical infrastructure",
+        "incident response",
+        "state and local cybersecurity"
+      ]
+    },
+    {
+      "goal_id": "G5",
+      "title": "Technology workforce",
+      "description": "Replace retiring workers in the agency with a wave of new, innovative workers by establishing new career pathways and modernizing the job to make it more desirable.",
+      "keywords": [
+        "IT workforce",
+        "cybersecurity workforce",
+        "digital skills",
+        "apprenticeship",
+        "career pathways"
+      ]
+    }
+  ],
+  "keywords": [
+    "data sharing",
+    "broadband connectivity",
+    "cybersecurity",
+    "digital literacy",
+    "enterprise infrastructure",
+    "personally identifiable information",
+    "quantum computing",
+    "open data"
+  ],
+  "program_areas": [
+    "broadband",
+    "digital equity",
+    "digital opportunity",
+    "high-speed internet"
+  ],
+  "exclude_keywords": [],
+  "preferred_funders": [
+    "NTIA",
+    "NIST",
+    "DHS"
+  ],
+  "_original_keywords": [
+    "bi-directional data-sharing",
+    "broadband connectivity",
+    "cybersecurity",
+    "data resource hub",
+    "digital literacy",
+    "enterprise infrastructure",
+    "personally identifiable information",
+    "quantum computing"
+  ],
+  "_review": [
+    "Goal wording is Person B's (typos fixed). Keywords marked in _review were proposed by Claude and need team approval.",
+    "FIX: 'bi-directional data-sharing' -> 'data sharing'; 'data resource hub' -> 'open data' (grant wording, not plan jargon).",
+    "PROPOSED: broadband added as program_areas because no goal covers it; check the NCDIT plan and move into a goal if it is there.",
+    "PROPOSED: all per-goal keywords. source_document still needs the real plan link."
+  ],
+  "updated_at": "2026-11-07"
+}

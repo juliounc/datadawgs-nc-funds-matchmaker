@@ -1,0 +1,120 @@
+{
+  "agency_id": "ncdncr",
+  "agency_name": "NC Department of Natural and Cultural Resources",
+  "source_document": {
+    "title": "REPLACE: NCDNCR strategic plan title",
+    "url": "REPLACE: link",
+    "year": null
+  },
+  "mission": "We enrich people's lives through education and stewardship of North Carolina's natural and cultural resources.",
+  "goals": [
+    {
+      "goal_id": "G1",
+      "title": "Education through DNCR resources",
+      "description": "Promote education using DNCR resources by pairing with local schools to promote lesson plans, class visits, extracurricular activities, and field trips to DNCR sites.",
+      "keywords": [
+        "environmental education",
+        "STEM education",
+        "museum education",
+        "field trips",
+        "K-12"
+      ]
+    },
+    {
+      "goal_id": "G2",
+      "title": "Community and tourism",
+      "description": "Utilize DNCR sites to uplift local communities by adding amenities and partnering with local communities to host events that will increase tourism and visibility.",
+      "keywords": [
+        "outdoor recreation",
+        "tourism",
+        "heritage tourism",
+        "community engagement",
+        "state parks"
+      ]
+    },
+    {
+      "goal_id": "G3",
+      "title": "Protect, restore, and expand access to resources",
+      "description": "Protect, restore, and enhance natural and cultural resources by expanding appropriate programs. Also make sites and green spaces more accessible to underserved communities, veterans, retirees, etc both in person and digitally.",
+      "keywords": [
+        "habitat restoration",
+        "conservation",
+        "historic preservation",
+        "cultural resources",
+        "land acquisition",
+        "green space",
+        "digitization"
+      ]
+    },
+    {
+      "goal_id": "G4",
+      "title": "Efficiency and public engagement",
+      "description": "Improve the agency's efficiency and customer service. Improve internal cohesion through greater collaboration and clearer common objectives. Meanwhile, use cohesion to reinforce re-branding and expand opportunities for public engagement and feedback.",
+      "keywords": [
+        "public engagement",
+        "customer service",
+        "capacity building"
+      ]
+    },
+    {
+      "goal_id": "G5",
+      "title": "Hurricane Helene recovery and resilience",
+      "description": "Repair damage done to DNCR sites by Hurricane Helene while using funding to also support affected communities. Enact measures to future proof the sites and vulnerable areas from future natural disasters and potential consequences of climate change.",
+      "keywords": [
+        "Hurricane Helene",
+        "disaster recovery",
+        "hazard mitigation",
+        "climate resilience",
+        "flood resilience",
+        "climate mitigation"
+      ]
+    }
+  ],
+  "keywords": [
+    "climate mitigation",
+    "ecosystem restoration",
+    "historic preservation",
+    "tourism",
+    "natural heritage",
+    "green space",
+    "habitat restoration",
+    "land conservation"
+  ],
+  "program_areas": [
+    "state parks",
+    "state historic sites",
+    "museums",
+    "state library",
+    "archives",
+    "aquariums",
+    "zoo",
+    "arts"
+  ],
+  "exclude_keywords": [],
+  "preferred_funders": [
+    "NPS",
+    "FWS",
+    "NEA",
+    "NEH",
+    "IMLS",
+    "NOAA",
+    "DHS"
+  ],
+  "_original_keywords": [
+    "climate mitigation",
+    "ecosystem enhancement",
+    "historic preservation",
+    "local tourism",
+    "natural heritage work",
+    "preservation footprint",
+    "public green spaces",
+    "restoration footprint",
+    "visitation impacts"
+  ],
+  "_review": [
+    "Goal wording is Person B's (typos fixed). Keywords marked in _review were proposed by Claude and need team approval.",
+    "FIX: replaced plan jargon that grants don't use: 'preservation footprint', 'restoration footprint', 'visitation impacts' -> 'habitat restoration', 'land conservation'; 'ecosystem enhancement' -> 'ecosystem restoration'; 'local tourism' -> 'tourism'; 'natural heritage work' -> 'natural heritage'; 'public green spaces' -> 'green space'.",
+    "PROPOSED: all per-goal keywords, program_areas (DNCR divisions). DHS included as funder for FEMA disaster recovery grants. source_document needs the real plan link."
+  ],
+  "updated_at": "2026-11-07"
+}
